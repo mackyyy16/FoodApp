@@ -1,0 +1,40 @@
+<div class="contener">
+    <h1>Dodaj zgłoszenie</h1>
+    <div class="testClass">
+    <table>
+        <tr>
+            <td><label>Marka: </label></td>
+            <td><input type="text" [(ngModel)]="newCar.mark"></td>
+        </tr>
+        <tr>
+            <td><label>Model: </label></td>
+            <td><input type="text" [(ngModel)]="newCar.model"></td>
+        </tr>
+        <tr>
+            <td><label>Numer rejestracyjny: </label></td>
+            <td><input type="text" [(ngModel)]="newCar.regnumber"></td>
+        </tr>
+        <tr>
+            <td><label>Numer VIN: </label></td>
+            <td><input type="number" [(ngModel)]="newCar.nrvin"></td>
+        </tr>
+        <tr>
+            <td><label>Przebieg: </label></td>
+            <td><input type="number" [(ngModel)]="newCar.course"></td>
+        </tr>
+        <tr>
+            <td><label>Opis usterki: </label></td>
+            <td><input type="text" [(ngModel)]="newCar.descfault"></td>
+        </tr>
+    </table>
+    </div>
+    <br>
+    <div>
+        <button (click)="add()">Dodaj</button>
+    </div>
+    <br><br>
+    <div *ngIf="showMessage">
+        <label>Nr twojego zgloszenia to: {{newCar.id_car}}</label>
+    </div>
+</div>
+

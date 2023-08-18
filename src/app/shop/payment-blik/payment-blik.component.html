@@ -1,0 +1,29 @@
+<div class="page-content">
+    <div class="logo">
+        Płace z<img src="../../../assets/images/logoblik.png">
+    </div>
+    <div class="form">
+        <div class="page">
+            AutoParts
+        </div>
+        <div class="value">
+            {{price}} zł
+        </div>
+        <div class="payment-box">
+            <div class="blik-input-txt">
+                <label>
+                <span class="bliktext">kod BLIK</span>
+                <br>
+                <span class="blikcode">Skąd wziąć kod?</span>
+                </label>
+            </div>
+            <div class="blik-input-field">
+                <input class="inputblik" type="tel" maxlength="6" [(ngModel)]="blikNumber">
+            </div>
+        </div>
+        <div class="button-row">
+            <button class="button-cancel">Anuluj</button>
+            <button class="button-accept" (click)="acceptBlik()">Wykonaj</button>
+        </div>
+    </div>
+</div>

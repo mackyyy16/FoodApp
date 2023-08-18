@@ -1,0 +1,29 @@
+<div class="motor-oils">
+    <h2>Klocki, szczęki i tarcze hamulcowe</h2>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Nazwa</th>
+                <th>Producent</th>
+                <th>Cena</th>
+                <th>Ilość</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let part of parts">
+                <td><img src='{{ "assets/images/" + part.imagePath }}'></td>
+                <td>{{part.name}}</td>
+                <td>{{part.producent}}</td>
+                <td>{{part.price}} zł</td>
+                <td>
+                    <input type="number" [(ngModel)]="part.amount">/{{part.amountInStorage}}
+                </td>
+                <td>
+                    <button (click)="addButton(part)">Dodaj</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

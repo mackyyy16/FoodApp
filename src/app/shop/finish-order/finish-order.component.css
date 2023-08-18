@@ -1,0 +1,32 @@
+.page-content{
+    height: 604px;
+    margin-top: 150px;
+}
+
+.logo{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.page{
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+button{
+    width: 190px;
+    padding: 15px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 18px;
+    color:white;
+    background-color: rgb(153, 152, 152);
+    margin-left: 860px;
+    margin-top: 50px
+}
+
+button:hover{
+    background-color: #ea382e;
+}

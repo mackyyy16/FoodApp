@@ -1,0 +1,62 @@
+body, h1, h2, h3, p, ul, li, form, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Ustawienie kolorów i stylów tła */
+  
+  h1 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  /* Stylowanie formularza */
+  form {
+    display: flex;
+    flex-direction: column;
+    height: 680px;
+    margin-left: 38%;
+  }
+  
+  label {
+    margin-top: 1rem;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 16px;
+    width: 500px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 200px;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  /* Responsywność */
+  @media screen and (max-width: 480px) {
+    form {
+      width: 100%;
+    }
+  }
+  

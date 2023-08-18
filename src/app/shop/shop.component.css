@@ -1,0 +1,276 @@
+.shop{
+    width: 1600px;
+}
+
+h2{
+    text-align: center;
+}
+
+body{
+    display: grid;
+    min-height: 150vh;
+    line-height: 1.6;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    padding-right: 15px;
+}
+
+.card1{
+    background-image: url('../../assets/images/pizza.jpg');
+    background-size: cover;
+    padding: 10rem 0 0;
+    max-width: 28ch;
+    color: rgb(0, 255, 157);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 35px;
+    margin-right: 35px;
+    margin-left: 35px;
+    width: 25%;
+}
+
+.card2{
+    background-image: url('../../assets/images/kungpao.jpg');
+    background-size: cover;
+    padding: 10rem 0 0;
+    max-width: 28ch;
+    color: rgb(0, 255, 157);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 35px;
+    margin-right: 35px;
+    margin-left: 35px;
+    width: 25%;
+}
+
+.card3{
+    background-image: url('../../assets/images/sushi.jpg');
+    background-size: cover;
+    padding: 10rem 0 0;
+    max-width: 28ch;
+    color: rgb(0, 255, 157);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 35px;
+    margin-right: 35px;
+    margin-left: 35px;
+    width: 25%;
+}
+
+.card4{
+    background-image: url('../../assets/images/tacos.jpg');
+    background-size: cover;
+    padding: 10rem 0 0;
+    max-width: 28ch;
+    color: rgb(0, 255, 157);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 35px;
+    margin-right: 30px;
+    margin-left: 35px;
+    width: 25%;
+}
+
+.card5{
+    background-image: url('../../assets/images/soup-french.jpg');
+    background-size: cover;
+    padding: 10rem 0 0;
+    max-width: 28ch;
+    color: rgb(0, 255, 157);
+    border-radius: 0.5rem;
+    overflow: hidden; 
+    display: inline-block;
+    margin-bottom: 35px;
+    margin-right: 35px;
+    margin-left: 35px;
+    width: 25%;
+}
+
+.card6{
+    background-image: url('../../assets/images/chicken.jpg');
+    background-size: cover;
+    padding: 10rem 0 0;
+    max-width: 28ch;
+    color: rgb(0, 255, 157);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 35px;
+    margin-right: 35px;
+    margin-left: 35px;
+    width: 25%;
+}
+
+.card7{
+    background-image: url('../../assets/images/moussaka.jpg');
+    background-size: cover;
+    padding: 10rem 0 0;
+    max-width: 28ch;
+    color: rgb(0, 255, 157);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 35px;
+    margin-right: 35px;
+    margin-left: 35px;
+    width: 25%;
+}
+
+.card8{
+    background-image: url('../../assets/images/pad-thai.jpg');
+    background-size: cover;
+    padding: 10rem 0 0;
+    max-width: 28ch;
+    color: rgb(0, 255, 157);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 35px;
+    margin-right: 30px;
+    margin-left: 35px;
+    width: 25%;
+}
+
+.card-content{
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% /0.3) 20%,
+        hsl(0 0% 0% /1)
+    );
+    transform: translateY(75%);
+    transition: transform 200ms ease;
+    transition-delay: 300ms;
+}
+
+.card-content > *:not(.card-title) {
+    opacity: 0;
+    transition: opacity 200ms linear;
+}
+
+.card1:hover .card-content{
+    transform: translateY(0)
+}
+.card1:hover .card-content > *:not(.card-title){
+    opacity: 1;
+    transition-delay: 300ms;
+}
+.card2:hover .card-content{
+    transform: translateY(0)
+}
+.card2:hover .card-content > *:not(.card-title){
+    opacity: 1;
+    transition-delay: 300ms;
+}
+.card3:hover .card-content{
+    transform: translateY(0)
+}
+.card3:hover .card-content > *:not(.card-title){
+    opacity: 1;
+    transition-delay: 300ms;
+}
+.card4:hover .card-content{
+    transform: translateY(0)
+}
+.card4:hover .card-content > *:not(.card-title){
+    opacity: 1;
+    transition-delay: 300ms;
+}
+.card5:hover .card-content{
+    transform: translateY(0)
+}
+.card5:hover .card-content > *:not(.card-title){
+    opacity: 1;
+    transition-delay: 300ms;
+}
+.card6:hover .card-content{
+    transform: translateY(0)
+}
+.card6:hover .card-content > *:not(.card-title){
+    opacity: 1;
+    transition-delay: 300ms;
+}
+.card7:hover .card-content{
+    transform: translateY(0)
+}
+.card7:hover .card-content > *:not(.card-title){
+    opacity: 1;
+    transition-delay: 300ms;
+}
+.card8:hover .card-content{
+    transform: translateY(0)
+}
+.card8:hover .card-content > *:not(.card-title){
+    opacity: 1;
+    transition-delay: 300ms;
+}
+
+.card-title{
+    position: relative;
+    width: max-content;
+    margin-left: 0;
+}
+
+.card-title::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    margin-bottom: 2px;
+    left: calc(var(--padding) * -1);
+    bottom: 0;
+    width: calc( 100% + var(--padding));
+    background: rgb(0, 255, 157);
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 200ms ease;
+}
+
+.card1:hover .card-title::after {
+    transform: scaleX(1);  
+}
+.card2:hover .card-title::after {
+    transform: scaleX(1);  
+}
+.card3:hover .card-title::after {
+    transform: scaleX(1);  
+}
+.card4:hover .card-title::after {
+    transform: scaleX(1);  
+}
+.card5:hover .card-title::after {
+    transform: scaleX(1);  
+}
+.card6:hover .card-title::after {
+    transform: scaleX(1);  
+}
+.card7:hover .card-title::after {
+    transform: scaleX(1);  
+}
+.card8:hover .card-title::after {
+    transform: scaleX(1);  
+}
+
+
+.card-body{
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 255, 157);
+    padding: 0.5em 1.15em;
+}
+
+.button:hover, button:focus{
+    background-color: rgb(0, 213, 131);
+}

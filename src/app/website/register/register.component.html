@@ -1,0 +1,58 @@
+<div class="contener">
+    <h1>Rejestracja</h1>
+    <div class="register-box">
+        <table>
+            <tr>
+                <td><label>Imie: </label></td>
+                <td><input type="text" [(ngModel)]="user.name"></td>
+            </tr>
+            <tr>
+                <td><label>Nazwisko: </label></td>
+                <td><input type="text" [(ngModel)]="user.surname"></td>
+            </tr>
+            <tr>
+                <td><label>Płeć: </label></td>
+                <td>
+                    <label><input type="radio" value="true" name="isMen" [(ngModel)]="isMen"> Mężczyzna</label>
+                    <label><input type="radio" value="false" name="isMen" [(ngModel)]="isMen"> Kobieta</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Login: </label></td>
+                <td><input type="text" [(ngModel)]="user.login"></td>
+            </tr>
+            <tr>
+                <td><label>Hasło: </label></td>
+                <td><input type="text" [(ngModel)]="user.password"></td>
+            </tr>
+            <tr>
+                <td><label>E-mail: </label></td>
+                <td><input type="text" [(ngModel)]="user.email"></td>
+            </tr>
+            <tr>
+                <td><label>Data urodzenia: </label></td>
+                <td><input type="text" [(ngModel)]="user.dateofbirth"></td>
+            </tr>
+            <tr>
+                <td><label>Numer telefonu: </label></td>
+                <td><input type="number" [(ngModel)]="user.phonenumber"></td>
+            </tr>
+            <tr>
+                <td><label>Ulica i numer: </label></td>
+                <td><input type="text" [(ngModel)]="user.street"></td>
+            </tr>
+            <tr>
+                <td><label>Kod pocztowy: </label></td>
+                <td><input type="text" [(ngModel)]="user.postcode"></td>
+            </tr>
+            <tr>
+                <td><label>Miasto: </label></td>
+                <td><input type="text" [(ngModel)]="user.city"></td>
+            </tr>
+        </table>
+    </div>
+    <button (click)="register()">Zarejestruj się</button>
+    <div class="login1">
+        <span>Masz juz konto?</span><a [routerLink]="['/login']">Zaloguj się</a>
+    </div>
+</div>

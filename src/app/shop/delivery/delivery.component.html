@@ -1,0 +1,103 @@
+<div class="container">
+    <div class="header">
+        <div class="basket">
+            <h2 class="basket-title">Koszyk</h2>
+        </div>
+        <div class="delivery">
+            <h2 class="delivery-title">Dane adresowe</h2>
+        </div>
+        <div class="finished">
+            <h2 class="finished-title">Podsumowanie</h2>
+        </div>
+    </div>
+    <h3 class="deliverytitle">Dane adresowe</h3>
+    <div class="contentleft">
+        <div class="adressbox">
+            <div class="adress-form-group">
+                <div class="address-firstname">
+                    <input type="text" id="firstname" placeholder="Imię*" [(ngModel)]="firstname">
+                </div>
+                <div class="address-lastname">
+                    <input type="text" id="lastname" placeholder="Nazwisko*" [(ngModel)]="lastname">
+                </div>
+            </div>
+            <div class="adress-form-group">
+                <div class="address-street">
+                    <input type="text" id="street" placeholder="Ulica i numer*" [(ngModel)]="street">
+                </div>
+            </div>
+            <div class="adress-form-group">
+                <div class="address-postcode">
+                    <input type="text" id="postcode" placeholder="Kod pocztowy*" maxlength="6" [(ngModel)]="postcode">
+                </div>
+                <div class="address-city">
+                    <input type="text" id="city" placeholder="Miasto*" [(ngModel)]="city">
+                </div>
+            </div>
+            <div class="adress-form-group">
+                <div class="address-email">
+                    <input type="text" id="email" placeholder="Adres e-mail*" [(ngModel)]="email">
+                </div>
+                <div class="address-phone">
+                    <input type="text" id="phone" placeholder="Numer telefonu*" [(ngModel)]="phone">
+                </div>
+            </div>
+            <div class="adress-form-group">
+                <div class="address-addition">
+                    <input type="text" id="addition" placeholder="Dodatkowe uwagi (opcjonalne)" [(ngModel)]="addition">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contentright">
+        <div class="summarybox">
+            <h3 class="summarytitle">Podsumowanie koszyka</h3>
+            <table class="summarytable">
+                <tbody>
+                    <tr>
+                        <th>Wartość</th>
+                        <td>{{sum}} zł</td>
+                    </tr>
+                    <tr>
+                        <th>Wysyłka</th>
+                        <td>{{transportCost}} zł</td>
+                    </tr>
+                    <tr>
+                        <th>Koszt płatności</th>
+                        <td>{{paymentCost}} zł</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <hr>
+                        </th>
+                        <td>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="summarysum">Suma</th>
+                        <td class="summarymoney">{{totalValue}} zł</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="infobox">
+            <h3>Dlaczego my?</h3>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Największa oferta w Polsce<br>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Gwarancja niskich cen<br>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Tylko oryginalne części<br>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Natychmiastowa dostawa<br>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Bezproblemowy zwroty i wymiany<br>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Pełna weryfikacja zamówień<br>
+        </div>
+    </div>
+    <button id="buttonnext" (click)="nextButton()">Dalej</button>
+    <button id="buttonback" (click)="backButton()">Powrót</button>
+</div>
+

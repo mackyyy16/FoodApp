@@ -1,0 +1,154 @@
+<div class="container">
+    <div class="header">
+        <div class="basket">
+            <h2 class="basket-title">Koszyk</h2>
+        </div>
+        <div class="delivery">
+            <h2 class="delivery-title">Dane adresowe</h2>
+        </div>
+        <div class="finished">
+            <h2 class="finished-title">Podsumowanie</h2>
+        </div>
+    </div>
+    <h3 class="baskettitle">Twój koszyk</h3>
+    <div class="contentleft">
+        <div class="basketbox">
+            <table class="table-basket">
+                <thead>
+                    <tr class="box-left">
+                        <th>Nazwa</th>
+                        <th>Ilość</th>
+                        <th>Wartość</th>
+                        <th>Usuń</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let part of parts">
+                        <td class="box-left"><img src='{{ "assets/images/" + part.imagePath }}'> <span id="infoname">{{part.producent}} {{part.name}}</span></td>
+                        <td><input type="number" [(ngModel)]="part.amount" (change)="editQuantity()"></td>
+                        <td id="amount">{{part.price*part.amount}} zł</td>
+                        <td><button class="buttondelete" (click)="removeItem(part)">Usuń</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="paymentbox">
+            <h3>Sposób transportu</h3>
+            <div class="payment-line">
+                <input class=transport_1 name="transport" type="radio" (change)='transportValue(16, "Kurier InPost")'>
+                <label class=transport_2>Kurier InPost</label><img src="assets/images/inpost.png">
+                <span class=transport_3>Darmowa dostawa przy zamówieniach od 359zł</span>
+                <span class=transport_4>16,00 zł</span>
+            </div>
+            <div class="payment-line">
+                <input class=transport_1 name="transport" type="radio" (change)='transportValue(16, "Kurier DPD")'>
+                <label class=transport_2>Kurier DPD</label>
+                <img src="assets/images/dpd.png">
+                <span class=transport_3>Darmowa dostawa przy zamówieniach od 359zł</span>
+                <span class=transport_4>16,00 zł</span>
+            </div>
+            <div class="payment-line">
+                <input class=transport_1 name="transport" type="radio" (change)='transportValue(14, "InPost Paczkomaty 24/7")'>
+                <label class=transport_2>InPost Paczkomaty 24/7</label>
+                <img src="assets/images/24-7.png">
+                <span class=transport_3>(wybierz paczkomat)</span>
+                <span class=transport_4>14,00 zł</span>
+            </div>
+            <div class="payment-line">
+                <input class=transport_1 name="transport" type="radio" (change)='transportValue(16, "CAT Cargo Logictics")'>
+                <label class=transport_2>CAT Cargo Logictics</label>
+                <img src="assets/images/cat.png">
+                <span class=transport_3>Darmowa dostawa przy zamówieniach od 359zł</span>
+                <span class=transport_4>16,00 zł</span>
+            </div>
+            <div class="payment-line">
+                <input class=transport_1 name="transport" type="radio" (change)='transportValue(0, "Odbiór osobisty w Nowym Saczu")'>
+                <label class=transport_2>Odbiór osobisty w Nowym Saczu</label>
+                <span class=transport_3>ul. Piramowicza 213</span>
+                <span class=transport_4>0,00 zł</span>
+            </div>
+            <h3>Forma platności:</h3>
+            <div class="payment-line">
+                <input class=transport_1 name="payment" type="radio" (change)='paymentValue(6, "Pobranie - płatność przy odbiorze")'>
+                <label class=transport_2>Pobranie - płatność przy odbiorze</label>
+                <span class=transport_4>6,00 zł</span>
+            </div>
+            <div class="payment-line">
+                <input class=transport_1 name="payment" type="radio" (change)='paymentValue(0, "Przelew na konto bankowe")'>
+                <label class=transport_2>Przelew na konto bankowe</label>
+                <span class=transport_4>0,00 zł</span>
+            </div>
+            <div class="payment-line">
+                <input class=transport_1 name="payment" type="radio" (change)='paymentValue(0, "Przelewy 24")' >
+                <label class=transport_2>Przelewy 24</label>
+                <img src="assets/images/przelewy-24.png">
+                <span class=transport_4>0,00 zł</span>
+            </div>
+            <div class="payment-line">
+                <input class=transport_1 name="payment" type="radio" (change)='paymentValue(0, "Płatność BLIK")' >
+                <label class=transport_2>Płatność BLIK</label>
+                <img src="assets/images/blik.png">
+                <span class=transport_4>0,00 zł</span>
+            </div>
+        </div>
+    </div>
+    <div class="contentright">
+        <div class="summarybox">
+            <h3 class="summarytitle">Podsumowanie koszyka</h3>
+            <table class="summarytable">
+                <tbody>
+                    <tr>
+                        <th>Wartość</th>
+                        <td>{{sum}} zł</td>
+                    </tr>
+                    <tr>
+                        <th>Wysyłka</th>
+                        <td>{{transportCost}} zł</td>
+                    </tr>
+                    <tr>
+                        <th>Koszt płatności</th>
+                        <td>{{paymentCost}} zł</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <hr>
+                        </th>
+                        <td>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="summarysum">Suma</th>
+                        <td class="summarymoney">{{totalValue}} zł</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="infobox">
+            <h3>Dlaczego my?</h3>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Największa oferta w Polsce<br>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Gwarancja niskich cen<br>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Tylko oryginalne części<br>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Natychmiastowa dostawa<br>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Bezproblemowy zwroty i wymiany<br>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Pełna weryfikacja zamówień<br>
+        </div>
+    </div>
+    <button id="buttonnext" (click)="next()">Dalej</button>
+    <button id="buttonback" [routerLink]="['/shop']">Powrót</button>
+</div>
+
+<div *ngIf="showLogginInfo" class="modal">
+    <div class="modal-content">
+        <p class="loginempty">Aby kontynuować zakupy zaloguj się.</p>	
+        <br>
+        <button class="loginbutton" (click)=closeLogginWindow() [routerLink]="['/login']">Zaloguj się</button>
+        <button class="close"(click)=closeLogginWindow()>Zamknij</button>
+    </div>  
+  </div>

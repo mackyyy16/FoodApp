@@ -1,0 +1,50 @@
+<div class="contener">
+    <h1>Dodaj część</h1>
+    <div class="addbox">
+        <table>
+            <tr>
+                <td><label>Nazwa: </label></td>
+                <td><input type="text" [(ngModel)]="newPart.name"></td>
+            </tr>
+            <tr>
+                <td><label>Producent: </label></td>
+                <td><input type="text" [(ngModel)]="newPart.producer"></td>
+            </tr>
+            <tr>
+                <td><label>Cena: </label></td>
+                <td><input type="number" [(ngModel)]="newPart.price"></td>
+            </tr>
+            <tr>
+                <td><label>Ilość: </label></td>
+                <td><input type="number" [(ngModel)]="newPart.amount"></td>
+            </tr>
+            <tr>
+                <td><label>Zdjęcie: </label></td>
+                <td><input type="text" [(ngModel)]="newPart.path_to_image"></td>
+            </tr>
+            <tr>
+                <td><label>Kategoria: </label></td>
+                <td><select [(ngModel)]="selectedValueCategories">
+                    <option *ngFor="let item of categories" [ngValue]="item" >{{item.name}}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr *ngIf="selectedValueCategories.subCategories.length !== 0">
+                <td><label>Subkategoria: </label></td>
+                <td><select [(ngModel)]="selectedValueSubcategories">
+                    <option *ngFor="let item of selectedValueCategories.subCategories" [ngValue]="item" >{{item}}</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div>
+        <button (click)="add()">Dodaj</button>
+    </div>
+    <br>
+    <div *ngIf="showMessage">
+        <label>Pomyślnie dodano nową część!</label>
+    </div>
+</div>
+<br><br>

@@ -1,0 +1,188 @@
+/* container */
+
+.container{
+    padding: 0;
+    margin: 0;
+    min-height:81.5vh
+}
+
+/* header */
+
+.header{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+
+.basket{
+    width: 33%;
+    float: left;
+}
+
+.basket-title, .delivery-title, .finished-title{
+    color: #ce4b4b
+}
+
+.delivery{
+    width: 33%;
+    float: left;
+}
+
+.finished{
+    width: 33%;
+    float: left;
+}
+
+/* contentleft */
+
+.contentleft{
+    width: 50%;
+    float: left;
+}
+
+.ordertitle{
+    margin-left: 265px;
+    margin-bottom: 10px;
+}
+
+.order-summary-details{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 225px;
+}
+
+.order-details-box{
+    flex: 1 1 25%;
+    border-top: 1px solid gray;
+    margin-bottom: 5px;
+    margin-left: 40px;
+    margin-right: 30px;
+    padding: 5px 0 5px;
+}
+
+.order-details-title{
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+
+
+/* contentright */
+
+.contentright{
+    width: 50%;
+    float: left;
+}
+
+/* summarybox */
+
+.summarybox{
+    width: 530px;
+    margin-left: 190px;
+    border: 1px solid gray;
+}
+
+.summarybox tr th{
+    text-align: left;
+}
+
+.summarybox tr td{
+    text-align: right;
+}
+
+.summarytitle{
+    padding: 15px;
+    background-color: gray;
+    width: 500px;
+    text-align: center;
+}
+
+.summarytable{
+    padding: 20px;
+    font-weight: 400;
+}
+
+hr{
+    border: 1px solid #d7d7d7;
+    width: 230px;
+}
+
+.summarysum{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.summarymoney{
+    font-size: 28px;
+    color: #df6363
+}
+
+
+/* infobox */
+
+.infobox{
+    margin-left: 190px;
+    border: 1px solid gray;
+    margin-top: 20px;
+    width: 500px;
+    padding: 15px;
+}
+
+.infobox h3{
+    padding: 5px;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.imgbox{
+    background-color: black;
+}
+
+#buttonnext{
+    margin-top: 50px;
+    margin-right: 235px;
+    margin-left: 10px;
+    float: right;
+    width: 140px;
+    padding: 10px;
+    color: white;
+    background-color:  #ce4b4b;
+}
+
+#buttonnext:hover{
+    background-color: #833131;
+	color: white;
+}
+
+.button-1 {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #363636;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1rem;
+    height: 2.5em;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 5px 5px;
+    position: relative;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+    margin-top: 10px;
+  }
+  
+  .button-1:hover {
+    background-color: #b4b4b4;
+  }
+  

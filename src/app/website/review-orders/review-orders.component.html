@@ -1,0 +1,73 @@
+<div class="contener">
+    <h1>Przeglądaj zamówienia</h1>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Zamówienie</th>
+                    <th>Klient</th>
+                    <th>Data rozpoczęcia</th>
+                    <th>Data zakończenia</th>
+                    <th>Status</th>
+                    <th>Zakupione przedmioty</th>
+                    <th>Cena produktów</th>
+                    <th>Cena zamówienia</th>              
+                    <th>Rodzaj transportu</th>             
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of orders">
+                    <td>Zamówienie #{{order.id_order}}</td>
+                    <td>Id #{{order.id_client}}</td>
+                    <td>{{order.start_date}}</td>
+                    <td>{{order.end_date}}</td>
+                    <td>
+                        <select [(ngModel)]="order.status">
+                            <option *ngFor="let status of statusList" [ngValue]="status" >{{status}}</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button (click)="showOrderedParts(order)">
+                            Pokaż przedmioty
+                        </button>
+                    </td>
+                    <td>{{order.parts_price}}</td>
+                    <td>{{order.order_price}}</td>
+                    <td>{{order.transport}}</td>
+                    <td>
+                        <button (click)="updateOrder(order)">
+                            Zapisz
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+    </div>
+</div>
+<div *ngIf="toggleOrderedParts" class="modal">
+    <div class="modal-content">
+        <span class="close"(click)=closeEmptyDialogWindow()>&times;</span>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nazwa</th>
+                    <th>Producent</th>
+                    <th>Cena</th>
+                    <th>Ilość</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let part of orderParts">
+                    <td><img src='{{ "assets/images/" + part.imagePath }}'></td>
+                    <td>{{part.name}}</td>
+                    <td>{{part.producent}}</td>
+                    <td>{{part.price}} zł</td>
+                    <td>{{part.amount}} szt.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>  
+  </div>

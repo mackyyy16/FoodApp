@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>FoodApp</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="">
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	
+	<link rel="stylesheet" href="app.component.css" type="text/css" >
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<ul class="navbar">
+				<li><a [routerLink]="['/home']">Strona główna</a></li>
+				<li><a [routerLink]="['/gallery']">Galeria</a></li>
+				<li><a [routerLink]="['/home']" class="logo"> <img src="../..//src/assets/images/logo_savor.png"></a></li>
+				<li><a [routerLink]="['/shop']">Menu</a></li>
+				<!-- <li><a>Serwis</a>
+					<ul class="dropdown">
+						<li><a [routerLink]="['/price-list']">Cennik</a></li>
+						<li><a [routerLink]="['/add-application']">Dodaj zgłoszenie</a></li>
+						<li><a [routerLink]="['/review-application']">Przegladaj zgłoszenie</a></li>
+					</ul>
+				</li> -->
+				<!-- <li *ngIf="(menuBarService.visibleWorkerComponent | async)"><a>Strefa pracownika</a>
+					<ul class="dropdown">
+						<li><a [routerLink]="['/add-parts']">Dodaj część</a></li>
+						<li><a [routerLink]="['/review-parts']">Przegladaj części</a></li>
+						<li><a [routerLink]="['/review-orders']">Przegladaj zamówienia</a></li>
+						<li><a [routerLink]="['/review-application-worker']">Przegladaj zgłoszenia napraw</a></li>
+					</ul>
+				</li> -->
+				<li *ngIf="(menuBarService.visibleAdminComponent | async)"><a>Strefa przedsiębiorcy</a>
+					<ul class="dropdown"> 
+						<li><a [routerLink]="['/browse-employees']">Przeglądaj pracowników</a></li>
+						<li><a [routerLink]="['/browse-report']">Przeglądaj raporty</a></li>
+					</ul>
+				</li>
+				<li><a [routerLink]="['/contact']">Kontakt/O nas</a></li>
+			</ul>
+		</nav>
+		<div class="icons">
+			<div *ngIf="!(menuBarService.isLogged | async)">
+				<ul>
+					<li class="login"><a [routerLink]="['/login']"><img src="../..//src/assets/images/user-icon.png"></a></li>
+					<li class="basket"><a (click)="goToBasket()"><img src="../..//src/assets/images/cart-icon.png"></a></li>
+				</ul>
+			 </div>
+			 <div class="logged" *ngIf="(menuBarService.isLogged | async)">
+				<li>Witaj <span class="logincolor">{{menuBarService.loggedUser.name}},</span></li>
+				<li class="account"><a (click)="goToBasket()"><img src="../..//src/assets/images/cart-icon.png"></a></li>
+					<li class="dropdownlogin"><a><img src="../..//src/assets/images/menu.png"></a>
+						<ul>
+							<li class="account"><a [routerLink]="['/manage-account']"><img src="../..//src/assets/images/user-icon.png"> Zarządzaj kontem</a></li>
+							<li class="account"><a [routerLink]="['/orders-history']"> <img src="../..//src/assets/images/history.png">Historia zamówień</a></li>
+							<li class="account"><a (click)="logOff()"><img src="../..//src/assets/images/logoff.png"> Wyloguj</a></li>
+						</ul>
+					</li>
+			 </div>	
+		</div>
+	</header>
+	
+	<div class="content">
+		<router-outlet></router-outlet>
+	</div>	
+
+	<section class="footer">
+		<div class="contact">
+			<p>miejsce na stopke</p>
+		</div>
+	</section>
+	
+	<div *ngIf="showEmptyBasketDialog" class="modal">
+		<div class="modal-content">
+			<h2>KOSZYK</h2>
+			<br>
+			<p class="basketempty">Twój koszyk jest pusty.</p>	
+			<br>
+			<button class="shopbutton" (click)=closeEmptyDialogWindow() [routerLink]="['/shop']">Przejdź do sklepu</button>
+			<button class="close"(click)=closeEmptyDialogWindow()>Zamknij</button>
+		</div>  
+  	</div>
+  
+</body>
+</html>
+

@@ -1,0 +1,114 @@
+<div class="container">
+    <div class="header">
+        <div class="basket">
+            <h2 class="basket-title">Koszyk</h2>
+        </div>
+        <div class="delivery">
+            <h2 class="delivery-title">Dane adresowe</h2>
+        </div>
+        <div class="finished">
+            <h2 class="finished-title">Podsumowanie</h2>
+        </div>
+    </div>
+    <h3 class="ordertitle">Szczegóły zamówienia</h3>
+    <div class="contentleft">
+        <div class="order-summary-details">
+            <div class="order-details-box">
+                <h3 class="order-details-title">Adres dostawy</h3>
+                <div class="order-details-contaent">
+                    Imię: {{firstName}}
+                    <br>
+                    Nazwisko: {{lastname}}
+                    <br>
+                    Kod pocztowy: {{postcode}}
+                    <br>
+                    Telefon: {{phone}}
+                </div>
+                <button class="button-1" role="button" [routerLink]="['/delivery']">Edytuj</button>
+            </div>
+            <div class="order-details-box">
+                <h3 class="order-details-title">Adres rozliczeniowy</h3>
+                <div class="order-details-contaent">
+                    Imię: {{firstName}}
+                    <br>
+                    Nazwisko: {{lastname}}
+                    <br>
+                    Kod pocztowy: {{postcode}}
+                    <br>
+                    E-mail: {{email}}
+                    <br>
+                    Telefon: {{phone}}
+                </div>
+                <button class="button-1" role="button" [routerLink]="['/delivery']">Edytuj</button>
+            </div>
+            <div class="order-details-box">
+                <h3 class="order-details-title">Opcje dostawy</h3>
+                <div class="order-details-contaent">
+                    Transport: {{transport.name}}
+                    <br>
+                    Cena: {{transport.price}}zł
+                </div>
+                <button class="button-1" role="button" [routerLink]="['/basket']">Edytuj</button>
+            </div>
+            <div class="order-details-box">
+                <h3 class="order-details-title">Dane płatnicze</h3>
+                <div class="order-details-contaent">
+                    Płatność: {{payment.name}}
+                    <br>
+                    Cena: {{payment.price}}zł
+                </div>
+                <button class="button-1" role="button" [routerLink]="['/basket']">Edytuj</button>
+            </div>
+        </div>
+    </div>
+    <div class="contentright">
+        <div class="summarybox">
+            <h3 class="summarytitle">Podsumowanie koszyka</h3>
+            <table class="summarytable">
+                <tbody>
+                    <tr>
+                        <th>Wartość</th>
+                        <td>{{sum}} zł</td>
+                    </tr>
+                    <tr>
+                        <th>Wysyłka</th>
+                        <td>{{transportCost}} zł</td>
+                    </tr>
+                    <tr>
+                        <th>Koszt płatności</th>
+                        <td>{{paymentCost}} zł</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <hr>
+                        </th>
+                        <td>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="summarysum">Suma</th>
+                        <td class="summarymoney">{{totalValue}} zł</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="infobox">
+            <h3>Dlaczego my?</h3>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Największa oferta w Polsce<br>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Gwarancja niskich cen<br>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Tylko oryginalne części<br>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Natychmiastowa dostawa<br>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Bezproblemowy zwroty i wymiany<br>
+            <img class="imgbox"src="../..//src/assets/images/check.png">
+            Pełna weryfikacja zamówień<br>
+        </div>
+    </div>
+    <button id="buttonnext" (click)="salary()">Zamawiam i płacę</button>
+</div>
+

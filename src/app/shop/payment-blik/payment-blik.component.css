@@ -1,0 +1,101 @@
+.page-content{
+    text-align: center;
+    height: 629px;
+    margin-top: 125px;
+}
+
+.logo{
+    text-align: right;
+    margin-right: 800px;
+    margin-bottom: 20px;
+    font-size: 24px;
+
+}
+
+img{
+    margin-left: 10px;
+}
+
+.page{
+    font-size: 20px;
+    text-align: right;
+    margin-right: 800px;
+}
+
+.value{
+    text-align: right;
+    margin-right: 800px;
+    font-size: 36px;
+    font-weight: bolder;
+    padding: 24px 0 17px 0;
+}
+
+.bliktext{
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+.blikcode{
+    font-size: 14px;
+    font-weight: normal;
+    color: #ea3729
+}
+
+.blik-input-txt{
+    margin-left: 800px;
+    margin-top: 40px;
+    float: left;
+}
+
+.blik-input-field{
+    float: right;
+    margin-right: 800px;
+
+}
+
+.button-row{
+    float: left;
+    margin-top: 30px;
+    margin-left: 870px;
+
+}
+
+.inputblik{
+    background: white;
+    border: 2px solid #ccc;
+    padding: 2px;
+    height: 73px;
+    width: 174px;
+    font-size: 21px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button{
+    height: 50px;
+    padding: 0 20px;
+    text-align: center;
+    max-width: 50%;
+    color: white;
+    outline-style: none;
+    white-space: normal;
+    border-radius: 25px;
+    border-style: none;
+}
+
+.button-accept{
+    background-color: rgb(153, 152, 152);
+    
+    width: 150px;
+}
+
+.button-accept:hover{
+    background-color: #ea382e;
+}
+
+.button-cancel{
+    background-color: black;
+}

@@ -1,0 +1,49 @@
+h2{
+    text-align: center;
+}
+
+.spare-parts-box{
+    height: 754px;
+    width: 100%;
+}
+
+img{
+    opacity: 0.9;
+    width: 350px;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.engine-parts {
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.brake-pads {
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+}
+
+.drive-system {
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+}
+
+.brake-system {
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+}
+
+.text{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
