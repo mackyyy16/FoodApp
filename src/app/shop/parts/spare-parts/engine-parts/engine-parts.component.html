@@ -7,7 +7,7 @@
                 <th>Nazwa</th>
                 <th>Producent</th>
                 <th>Cena</th>
-                <!-- <th>Ilość</th> -->
+                <th>Ilość</th>
                 <th></th>
             </tr>
         </thead>
@@ -17,9 +17,9 @@
                 <td>{{meal.name}}</td>
                 <td>{{meal.producent}}</td>
                 <td>{{meal.price}} zł</td>
-                <!-- <td>
-                    <input type="number" [(ngModel)]="meal.amount">/{{meal.amountInStorage}}
-                </td> -->
+                <td>
+                    <input type="number">
+                </td>
                 <td>
                     <button (click)="addButton(meal)">Dodaj</button>
                 </td>

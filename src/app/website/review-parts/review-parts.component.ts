@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IMeal } from '../shared/models/food';
-import { PartService } from '../shared/http-services/mealService';
+import { MealService } from '../shared/http-services/mealService';
 
 @Component({
    templateUrl: './review-parts.component.html',
@@ -10,7 +10,7 @@ export class ReviewPartsComponent {
 
   public parts: IMeal[] = [];  
 
-  constructor(private partService: PartService){
+  constructor(private partService: MealService){
     this.partService.getMeals().then(data => {
       this.parts = data;
     });

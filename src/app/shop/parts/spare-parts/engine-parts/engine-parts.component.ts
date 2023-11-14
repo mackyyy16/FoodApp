@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ShopItem } from 'src/app/shop/shared/models/shop-item';
 import { SharedParameters } from 'src/app/shop/shared/shared-parameters';
-import { PartService as MealService } from 'src/app/website/shared/http-services/mealService';
+import { MealService as MealService } from 'src/app/website/shared/http-services/mealService';
 
 @Component({
    templateUrl: './engine-parts.component.html',
@@ -32,6 +32,7 @@ export class EnginePartsComponent {
   }
 
   addButton(item: ShopItem){
+    debugger;
     //  if(item.amount > item.amountInStorage){
     //   //wyświetl info ze za duzo elementow
     //  }else{

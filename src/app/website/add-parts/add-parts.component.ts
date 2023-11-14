@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PartService } from '../shared/http-services/mealService';
+import { MealService } from '../shared/http-services/mealService';
 import { ICategory, IMeal } from '../shared/models/food';
 
 @Component({
@@ -63,7 +63,7 @@ export class AddPartsComponent {
   public previousPartId = 0;
   public showMessage: boolean = false;
 
-  constructor(private partService: PartService){
+  constructor(private partService: MealService){
     this.partService.getMeals().then(data => {
       this.parts = data;
     });

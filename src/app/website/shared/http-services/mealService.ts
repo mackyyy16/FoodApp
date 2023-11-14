@@ -9,12 +9,12 @@ import { IMeal as IMeal } from '../models/food';
 @Injectable({
    providedIn: 'root'
 })
-export class PartService{
+export class MealService{
     constructor(private http: HttpClient){
 
     }
     private url = 'http://localhost:5001/api/meals';
-    private updateUrl = 'http://localhost:5001/api/parts/updatePartAmount';
+    private updateUrl = 'http://localhost:5001/api/meals/updateMealAmount';
 
     async getMeals(): Promise<IMeal[]>{
         return this.http.get<IMeal[]>(this.url)
@@ -32,7 +32,7 @@ export class PartService{
             );
     }
 
-    updatePart(meal: IMeal[]): Observable<IMeal>{
+    updateMeal(meal: IMeal[]): Observable<IMeal>{
         debugger;
         return this.http.post<IMeal>(this.updateUrl, meal)
             .pipe(

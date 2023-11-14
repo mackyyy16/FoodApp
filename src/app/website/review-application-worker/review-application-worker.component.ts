@@ -7,7 +7,7 @@ import { RepairPartService } from '../../website/shared/http-services/repairPart
 import { IMeal } from '../shared/models/food';
 import { IPartWithAmount } from '../../website/shared/models/part-with-amount';
 import { IRepairPart } from '../../website/shared/models/repair-part';
-import { PartService } from '../shared/http-services/mealService';
+import { MealService } from '../shared/http-services/mealService';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { UserService } from '../../website/shared/http-services/userService';
 import { UserRepairService } from '../../website/shared/http-services/userRepairService';
@@ -40,7 +40,7 @@ export class ReviewApplicationWorkerComponent {
   constructor(private carService: CarService,
               private repairService: RepairService,
               private repairPartService: RepairPartService,
-              private partsService: PartService,
+              private partsService: MealService,
               private userService: UserService,
               private userRepairService: UserRepairService){
 

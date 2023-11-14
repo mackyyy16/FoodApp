@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { OrderStatus, OrderStatusDic } from 'src/app/website/shared/enums/order';
 import { OrderService } from 'src/app/website/shared/http-services/orderService';
-import { PartService } from 'src/app/website/shared/http-services/mealService';
+import { MealService } from 'src/app/website/shared/http-services/mealService';
 import { IOrder } from 'src/app/website/shared/models/order';
 import { IMeal } from 'src/app/website/shared/models/food';
 import { SharedParameters } from '../shared/shared-parameters';
@@ -21,7 +21,7 @@ export class PaymentTransferComponent {
   public orders: IOrder[] = [];
   
   constructor(private readonly router: Router,
-    private readonly partService: PartService,
+    private readonly partService: MealService,
     private readonly orderService: OrderService){
       this.orderService.getOrders().then(data => {
         this.orders = data;
@@ -61,7 +61,7 @@ export class PaymentTransferComponent {
     
     let partsTemp;
     this.partService
-      .updatePart(parts)
+      .updateMeal(parts)
       .subscribe({
         next: partsFromApi => partsTemp = partsFromApi,
         error:err => err=err
@@ -74,14 +74,14 @@ export class PaymentTransferComponent {
 
     var newOrder: IOrder = {
       id_order: newOrderId,
-      id_client: SharedParameters.userInfo.id_user,
-      part_info: JSON.stringify(SharedParameters.storeItems),
+      user_id: SharedParameters.userInfo.id_user,
+      meals_info: JSON.stringify(SharedParameters.storeItems),
       start_date: "",
       end_date:"",
       status: OrderStatusDic[OrderStatus.Przyjeto],
       transport: SharedParameters.costSummary.transport.name,
       order_price: SharedParameters.costSummary.globalTotalValue,
-      parts_price: SharedParameters.costSummary.globalSum
+      meal_price: SharedParameters.costSummary.globalSum
     };
     
     let orderTemp;

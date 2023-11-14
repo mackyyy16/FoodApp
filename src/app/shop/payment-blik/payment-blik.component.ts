@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { OrderStatus, OrderStatusDic } from 'src/app/website/shared/enums/order';
 import { OrderService } from 'src/app/website/shared/http-services/orderService';
-import { PartService } from 'src/app/website/shared/http-services/mealService';
+import { MealService } from 'src/app/website/shared/http-services/mealService';
 import { IOrder } from 'src/app/website/shared/models/order';
 import { IMeal } from 'src/app/website/shared/models/food';
 import { SharedParameters } from '../shared/shared-parameters';
@@ -18,11 +18,11 @@ export class PaymentBlikComponent {
   public orders: IOrder[] = [];  
 
   constructor(private readonly router: Router,
-    private readonly partService: PartService,
+    private readonly mealService: MealService,
     private readonly orderService: OrderService){
-      this.orderService.getOrders().then(data => {
-        this.orders = data;
-      });
+      // this.orderService.getOrders().then(data => {
+      //   this.orders = data;
+      // });
     }
 
   acceptBlik(): void {
@@ -41,42 +41,44 @@ export class PaymentBlikComponent {
     //wyczyszczenie sharedparameters
     const parts : IMeal[] = [];
 
-    // SharedParameters.storeItems.forEach(part => {
-    //   parts.push({
-    //     id_meal: part.id_part,
-    //     amount: part.amount,
-    //     category: '',
-    //     name: '',
-    //     image_path: '',
-    //     price: 0,
-    //     producer:'',
-    //     subcategory: ''
-    //   });
-    // });
+    SharedParameters.storeItems.forEach(part => {
+      parts.push({
+        id_meal: part.id_part,
+        // amount: part.amount,
+        // category: '',
+        name: '',
+        image_path: '',
+        price: 0,
+        // producer:'',
+        // subcategory: ''
+        description: ''
+      });
+    });
     
     let partsTemp;
-    this.partService
-      .updatePart(parts)
-      .subscribe({
-        next: partsFromApi => partsTemp = partsFromApi,
-        error:err => err=err
-      }); 
+    // this.mealService
+    //   .updateMeal(parts)
+    //   .subscribe({
+    //     next: partsFromApi => partsTemp = partsFromApi,
+    //     error:err => err=err
+    //   }); 
   }
 
   addOrderToDb(): void {
+    debugger;
     let sortedParts = [...this.orders.sort((a, b) => a.id_order - b.id_order).reverse()];
     let newOrderId = sortedParts.length !== 0 ? sortedParts[0].id_order + 1 : 1;
 
     var newOrder: IOrder = {
       id_order: newOrderId,
-      id_client: SharedParameters.userInfo.id_user,
-      part_info: JSON.stringify(SharedParameters.storeItems),
+      user_id: SharedParameters.userInfo.id_user,
+      meals_info: JSON.stringify(SharedParameters.storeItems),
       start_date: "",
       end_date:"",
       status: OrderStatusDic[OrderStatus.Przyjeto],
       transport: SharedParameters.costSummary.transport.name,
       order_price: SharedParameters.costSummary.globalTotalValue,
-      parts_price: SharedParameters.costSummary.globalSum
+      meal_price: SharedParameters.costSummary.globalSum
     };
     
     let orderTemp;

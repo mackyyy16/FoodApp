@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ShopItem } from 'src/app/shop/shared/models/shop-item';
 import { SharedParameters } from 'src/app/shop/shared/shared-parameters';
-import { PartService } from 'src/app/website/shared/http-services/mealService';
+import { MealService } from 'src/app/website/shared/http-services/mealService';
 
 @Component({
    templateUrl: './brake-pads.component.html',
@@ -9,7 +9,7 @@ import { PartService } from 'src/app/website/shared/http-services/mealService';
 })
 export class BrakePadsComponent {
     public parts: ShopItem[] = [];
-    constructor(private partService: PartService){
+    constructor(private partService: MealService){
       this.partService.getMeals().then(data => {
         let partsTemp: ShopItem[] =[];
         

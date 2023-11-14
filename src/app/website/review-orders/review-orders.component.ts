@@ -39,7 +39,7 @@ export class ReviewOrdersComponent {
 
   showOrderedParts(order: IOrder): void{
     this.toggleOrderedParts = true;
-    this.orderParts = JSON.parse(order.part_info);
+    this.orderParts = JSON.parse(order.meals_info);
   }
 
   closeEmptyDialogWindow(): void{
