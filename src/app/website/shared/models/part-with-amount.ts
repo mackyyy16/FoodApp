@@ -1,6 +1,6 @@
-import { IFood } from './food';
+import { IMeal } from './food';
 
 export interface IPartWithAmount{
-    part: IFood;
+    part: IMeal;
     amount: number;
 }

@@ -4,10 +4,10 @@ import { CarService } from '../../website/shared/http-services/carService';
 import { ICar } from '../../website/shared/models/car';
 import { RepairService } from '../../website/shared/http-services/repairService';
 import { RepairPartService } from '../../website/shared/http-services/repairPartService';
-import { IFood } from '../shared/models/food';
+import { IMeal } from '../shared/models/food';
 import { IPartWithAmount } from '../../website/shared/models/part-with-amount';
 import { IRepairPart } from '../../website/shared/models/repair-part';
-import { PartService } from '../../website/shared/http-services/partService';
+import { PartService } from '../shared/http-services/mealService';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { UserService } from '../../website/shared/http-services/userService';
 import { UserRepairService } from '../../website/shared/http-services/userRepairService';
@@ -30,7 +30,7 @@ export class ReviewApplicationWorkerComponent {
   selectedUserToRepair: string = "";
   partsListToCombo: string[] = [];
   usersListToCombo: string[] = [];
-  partsFromDb: IFood[] = [];
+  partsFromDb: IMeal[] = [];
   enteredQuantity: number;
   selectedApp: ICar;
   previousPartId = 0;
@@ -48,12 +48,12 @@ export class ReviewApplicationWorkerComponent {
       this.applications = carsFromApi;
     });  
 
-    this.partsService.getParts().then(partsFromApi => {
+    this.partsService.getMeals().then(partsFromApi => {
       this.partsFromDb = partsFromApi;
 
       for (let index = 0; index < this.partsFromDb.length; index++) {
         let element = this.partsFromDb[index];
-        let value = element.name + " - " + element.producer;
+        let value = element.name + " - ";// + element.producer;
         this.partsListToCombo.push(value);          
       }
 
@@ -128,12 +128,12 @@ export class ReviewApplicationWorkerComponent {
       let producer = this.selectedValue.split(' - ')[1];
 
       let part = this.partsFromDb
-        .filter(q => q.name.includes(name) && q.producer.includes(producer));
+        .filter(q => q.name.includes(name));// && q.producer.includes(producer));
 
       let repairPart: IRepairPart = {
         id: 0,
         amount: this.enteredQuantity,
-        id_part: part[0].id_part,
+        id_part: part[0].id_meal,
         id_repair: this.selectedApp.id_repair
       };
 

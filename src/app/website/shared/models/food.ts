@@ -1,12 +1,11 @@
-export interface IFood{
-    id_part: number;
+export interface IMeal{
+    id_meal: number;
     name: string;
-    producer: string;
     price: number;
-    amount: number;
-    path_to_image: string;
-    category: string;
-    subcategory: string;
+    image_path: string;
+    // category: string;
+    // subcategory: string;
+    description: string;
 }
 
 export interface ICategory {

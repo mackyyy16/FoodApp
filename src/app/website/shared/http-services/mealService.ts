@@ -4,7 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { IUser } from '../models/user';
 import { tap, catchError } from 'rxjs/operators';
 import { ICar } from '../models/car';
-import { IFood } from '../models/food';
+import { IMeal as IMeal } from '../models/food';
 
 @Injectable({
    providedIn: 'root'
@@ -13,38 +13,38 @@ export class PartService{
     constructor(private http: HttpClient){
 
     }
-    private url = 'http://localhost:5001/api/parts';
+    private url = 'http://localhost:5001/api/meals';
     private updateUrl = 'http://localhost:5001/api/parts/updatePartAmount';
 
-    async getParts(): Promise<IFood[]>{
-        return this.http.get<IFood[]>(this.url)
+    async getMeals(): Promise<IMeal[]>{
+        return this.http.get<IMeal[]>(this.url)
             .pipe(
-                tap(data => console.log('Parts: '+ JSON.stringify(data))),
+                tap(data => console.log('Meals: '+ JSON.stringify(data))),
                 catchError(this.error)
             ).toPromise();
     }
 
-    addPart(part: IFood): Observable<IFood>{
-        return this.http.post<IFood>(this.url, part)
+    addPart(meal: IMeal): Observable<IMeal>{
+        return this.http.post<IMeal>(this.url, meal)
             .pipe(
-                tap(data => console.log('Parts: '+ JSON.stringify(data))),
+                tap(data => console.log('Meals: '+ JSON.stringify(data))),
                 catchError(this.error)
             );
     }
 
-    updatePart(parts: IFood[]): Observable<IFood>{
+    updatePart(meal: IMeal[]): Observable<IMeal>{
         debugger;
-        return this.http.post<IFood>(this.updateUrl, parts)
+        return this.http.post<IMeal>(this.updateUrl, meal)
             .pipe(
-                tap(data => console.log('Parts: '+ JSON.stringify(data))),
+                tap(data => console.log('Meals: '+ JSON.stringify(data))),
                 catchError(this.error)
             );
     }
 
-    async removePart(part: IFood): Promise<IFood>{
-        return this.http.delete<IFood>(this.url+'/'+part.id_part)
+    async removePart(meal: IMeal): Promise<IMeal>{
+        return this.http.delete<IMeal>(this.url+'/'+meal.id_meal)
             .pipe(
-                tap(data => console.log('Parts: '+ JSON.stringify(data))),
+                tap(data => console.log('Meals: '+ JSON.stringify(data))),
                 catchError(this.error)
             ).toPromise();
     }

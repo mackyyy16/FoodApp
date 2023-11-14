@@ -4,7 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { IUser } from '../models/user';
 import { tap, catchError } from 'rxjs/operators';
 import { ICar } from '../models/car';
-import { IFood } from '../models/food';
+import { IMeal } from '../models/food';
 import { IRepairPart } from '../models/repair-part';
 import { IPartWithAmount } from '../models/part-with-amount';
 

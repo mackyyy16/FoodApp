@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IFood } from '../shared/models/food';
-import { PartService } from '../../website/shared/http-services/partService';
+import { IMeal } from '../shared/models/food';
+import { PartService } from '../shared/http-services/mealService';
 
 @Component({
    templateUrl: './review-parts.component.html',
@@ -8,10 +8,10 @@ import { PartService } from '../../website/shared/http-services/partService';
 })
 export class ReviewPartsComponent {
 
-  public parts: IFood[] = [];  
+  public parts: IMeal[] = [];  
 
   constructor(private partService: PartService){
-    this.partService.getParts().then(data => {
+    this.partService.getMeals().then(data => {
       this.parts = data;
     });
   }
@@ -21,7 +21,7 @@ export class ReviewPartsComponent {
     await this.partService.removePart(part);
 
     //odśwież listę części
-    await this.partService.getParts().then(data => {
+    await this.partService.getMeals().then(data => {
       this.parts = data;
     });
   }

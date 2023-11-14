@@ -4,25 +4,25 @@
         <table>
             <tr>
                 <td><label>Nazwa: </label></td>
-                <td><input type="text" [(ngModel)]="newPart.name"></td>
+                <td><input type="text" [(ngModel)]="newMeal.name"></td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td><label>Producent: </label></td>
-                <td><input type="text" [(ngModel)]="newPart.producer"></td>
-            </tr>
+                <td><input type="text" [(ngModel)]="newMeal.producer"></td>
+            </tr> -->
             <tr>
                 <td><label>Cena: </label></td>
-                <td><input type="number" [(ngModel)]="newPart.price"></td>
+                <td><input type="number" [(ngModel)]="newMeal.price"></td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td><label>Ilość: </label></td>
-                <td><input type="number" [(ngModel)]="newPart.amount"></td>
-            </tr>
+                <td><input type="number" [(ngModel)]="newMeal.amount"></td>
+            </tr> -->
             <tr>
                 <td><label>Zdjęcie: </label></td>
-                <td><input type="text" [(ngModel)]="newPart.path_to_image"></td>
+                <td><input type="text" [(ngModel)]="newMeal.image_path"></td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td><label>Kategoria: </label></td>
                 <td><select [(ngModel)]="selectedValueCategories">
                     <option *ngFor="let item of categories" [ngValue]="item" >{{item.name}}</option>
@@ -34,8 +34,8 @@
                 <td><select [(ngModel)]="selectedValueSubcategories">
                     <option *ngFor="let item of selectedValueCategories.subCategories" [ngValue]="item" >{{item}}</option>
                     </select>
-                </td>
-            </tr>
+                </td> -->
+            <!-- </tr> -->
         </table>
     </div>
     <br>

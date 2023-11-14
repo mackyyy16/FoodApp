@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { OrderStatus, OrderStatusDic } from 'src/app/website/shared/enums/order';
 import { OrderService } from 'src/app/website/shared/http-services/orderService';
-import { PartService } from 'src/app/website/shared/http-services/partService';
+import { PartService } from 'src/app/website/shared/http-services/mealService';
 import { IOrder } from 'src/app/website/shared/models/order';
-import { IFood } from 'src/app/website/shared/models/food';
+import { IMeal } from 'src/app/website/shared/models/food';
 import { SharedParameters } from '../shared/shared-parameters';
 
 @Component({
@@ -39,20 +39,20 @@ export class PaymentBlikComponent {
     //dodanie zamowienia do uzytkownika jak zalogowany, co jak nie?
     //zmienienie ilosci elementow w bazie o te kupione
     //wyczyszczenie sharedparameters
-    const parts : IFood[] = [];
+    const parts : IMeal[] = [];
 
-    SharedParameters.storeItems.forEach(part => {
-      parts.push({
-        id_part: part.id_part,
-        amount: part.amount,
-        category: '',
-        name: '',
-        path_to_image: '',
-        price: 0,
-        producer:'',
-        subcategory: ''
-      });
-    });
+    // SharedParameters.storeItems.forEach(part => {
+    //   parts.push({
+    //     id_meal: part.id_part,
+    //     amount: part.amount,
+    //     category: '',
+    //     name: '',
+    //     image_path: '',
+    //     price: 0,
+    //     producer:'',
+    //     subcategory: ''
+    //   });
+    // });
     
     let partsTemp;
     this.partService
