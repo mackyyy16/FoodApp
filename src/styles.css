@@ -1,8 +1,8 @@
 *{
     margin: 0 auto;
     border-style: none;
-    background-color: black;
-    color: white;
+    background-color: background rgba(255, 255, 255, 0.74);
+    color: black;
 }
 
 /* width */

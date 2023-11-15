@@ -1,111 +1,95 @@
-.login-box{
-    height: 602px;
-    width: 1000px;
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.login1{
-    width:50%;
-    display: inline-block;
+.container {
+    background: white;
+    margin-top: 4%;
+    padding: 30px;
+    width: 50%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-.register{
-    width:50%;
-    display: inline-block;
+.test{
+    margin-left: 5px;
 }
 
-h2{
-    font-size: 28px;
-    color: white;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 150px;
-    text-align: left;
-    margin-left: 110px;
-    margin-bottom: 30px;
+h1 {
+    color: #333;
+    margin-bottom: 8px;
 }
 
-h3{
-    font-size: 24px;
-    color: white;
-    font-weight: 400;
-    text-align: center;
+p {
+    color: #A5A5A5;
+    font-size: 14px;
     margin-bottom: 20px;
 }
 
-.register ul li{
-    list-style-type: none;
-    margin: 0px;
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: #F3F3F3;
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background-color: #ff7f00;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
     font-size: 16px;
 }
-  
-.box input[type = "text"], .box input[type = "password"]{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 5px auto;
+
+button:hover {
+    background-color: #e76e00;
+}
+
+.login-link {
     text-align: center;
-    border: 2px solid #c34f4f;
-    padding: 14px 10px;
-    width: 200px;
-    outline: none;
-    color: white;
-    transition: 0.5s;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 
-.box input[type = "text"]:focus, .box input[type = "password"]:focus{
-    width: 210px;
-    border-color: #751b1b;
+.login-link a {
+    color:#FF8D28;
+    text-decoration: none;
 }
 
-.click{
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.register-link {
     text-align: center;
-    padding-bottom: 20px;
+    margin-top: 20px;
 }
 
-button{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 5px auto;
-    text-align: center;
-    border: 2px solid #751b1b;
-    padding: 14px 30px;
-    width: 150px;
-    outline: none;
-    color: rgba(255, 255, 255, 0.561);
-    transition: 0.25s;
-    background: #c34f4f;
-    }
-
-button:hover{
-    background-color:  #751b1b;
+.register-link a {
+    color: #FF8D28;
+    text-decoration: none;
 }
 
-.login{
-    color: white;
-    font-weight: 400;
-    text-align: center;
-    padding-bottom: 15px;
-    margin-right: 510px;
-    font-size: 18px;
+.register-link a:hover {
+    text-decoration: underline;
 }
 
-ul{
-    list-style-type: none;
-    padding-bottom: 10px;
-    margin: 0px;
-    padding-top: 5px;
-    font-size: 22px;
-    margin-left: 90px;
+.inline-element{
+    display: inline-block;
+    font-size: 14px;
 }
 
-ul li::before {
-    content: "\279C";
-    color:#c34f4f;
-    font-weight: bold;
-    display: inline-block; 
-    width: 1.2em;
-    margin-left: -0.5em;
-  }
-  
-  

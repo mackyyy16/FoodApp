@@ -1,58 +1,21 @@
-<div class="contener">
-    <h1>Rejestracja</h1>
-    <div class="register-box">
-        <table>
-            <tr>
-                <td><label>Imie: </label></td>
-                <td><input type="text" [(ngModel)]="user.name"></td>
-            </tr>
-            <tr>
-                <td><label>Nazwisko: </label></td>
-                <td><input type="text" [(ngModel)]="user.surname"></td>
-            </tr>
-            <tr>
-                <td><label>Płeć: </label></td>
-                <td>
-                    <label><input type="radio" value="true" name="isMen" [(ngModel)]="isMen"> Mężczyzna</label>
-                    <label><input type="radio" value="false" name="isMen" [(ngModel)]="isMen"> Kobieta</label>
-                </td>
-            </tr>
-            <tr>
-                <td><label>Login: </label></td>
-                <td><input type="text" [(ngModel)]="user.login"></td>
-            </tr>
-            <tr>
-                <td><label>Hasło: </label></td>
-                <td><input type="text" [(ngModel)]="user.password"></td>
-            </tr>
-            <tr>
-                <td><label>E-mail: </label></td>
-                <td><input type="text" [(ngModel)]="user.email"></td>
-            </tr>
-            <tr>
-                <td><label>Data urodzenia: </label></td>
-                <td><input type="text" [(ngModel)]="user.dateofbirth"></td>
-            </tr>
-            <tr>
-                <td><label>Numer telefonu: </label></td>
-                <td><input type="number" [(ngModel)]="user.phonenumber"></td>
-            </tr>
-            <tr>
-                <td><label>Ulica i numer: </label></td>
-                <td><input type="text" [(ngModel)]="user.street"></td>
-            </tr>
-            <tr>
-                <td><label>Kod pocztowy: </label></td>
-                <td><input type="text" [(ngModel)]="user.postcode"></td>
-            </tr>
-            <tr>
-                <td><label>Miasto: </label></td>
-                <td><input type="text" [(ngModel)]="user.city"></td>
-            </tr>
-        </table>
+    <div class="container">
+        <h1>Utwórz konto</h1>
+        <p>Utwórz konto by móc korzystać z naszej szerokiej oferty</p>
+        <form>
+            <input type="text" placeholder="Imie" [(ngModel)]="user.name">
+            <input type="text" placeholder="Nazwisko" [(ngModel)]="user.surname">
+            <input type="text" placeholder="Login" [(ngModel)]="user.login">
+            <input type="text" placeholder="Haslo" [(ngModel)]="user.password">
+            <input type="text" placeholder="Enail" [(ngModel)]="user.email">
+            <input type="text" placeholder="Data urodzin" [(ngModel)]="user.dateofbirth">
+            <input type="number" placeholder="Numer telefonu" [(ngModel)]="user.phonenumber">
+            <input type="text" placeholder="Ulica" [(ngModel)]="user.street">
+            <input type="text" placeholder="Kod pocztowy" [(ngModel)]="user.postcode">
+            <input type="text" placeholder="Miasto" [(ngModel)]="user.city">
+            <button type="submit">Utwórz konto</button>
+        </form>
+        <div class="login-link">
+            <p class="inline-element">Nie posiadasz konta?</p><a class="inline-element" [routerLink]="['/login']">Zaloguj sie</a>
+        </div>
     </div>
-    <button (click)="register()">Zarejestruj się</button>
-    <div class="login1">
-        <span>Masz juz konto?</span><a [routerLink]="['/login']">Zaloguj się</a>
-    </div>
-</div>
+
