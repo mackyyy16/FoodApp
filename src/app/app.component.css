@@ -2,7 +2,6 @@
 
 *{
     font-family: 'Roboto', sans-serif;
-    margin:0; 
 	padding:0;
     box-sizing: border-box;
     text-decoration: none;
@@ -12,7 +11,7 @@
 body 
 {
 	background-color: #ffffff;
-	color: #000000;
+	color: black;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 }
@@ -24,9 +23,9 @@ header{
 	z-index: 1000;
 	display: flex;
 	justify-content: space-between;
-	padding: 20px 50px;
+	padding: 15px;
 	transition: 0.5s linear;
-	background: rgb(11, 206, 131);
+	background: #f87d01;
 }
 
 .navbar{
@@ -44,7 +43,7 @@ header{
 }
 
 .navbar a:hover{
-	color: #ce4b4b;
+	color: #d1d1d1;
 	border-radius: 0.2rem;
 	transition: 0.2s all linear;
 }
@@ -65,7 +64,7 @@ header{
 }
 
 .icons img:hover{
-	background-color: #ce4b4b;
+	background-color: rgb(229, 115, 0);
 }
 
 .login{
@@ -74,17 +73,19 @@ header{
 
 .basket{
 	float: left;
-	margin-left: 10px;
+	margin-left: 20px;
+	margin-right: 10px;
 }
 
 .account a{
 	color: white;
 	font-size: 16px;
 	margin-left: 3px;
+	padding: 5px;
 }
 
 .account a:hover{
-	background: #ce4b4b;
+	background: rgb(229, 115, 0);
 }
 
 .basket-account{
@@ -107,7 +108,7 @@ header{
 }
 
 .logincolor{
-	color: #e94747;
+	color: #c2c2c2;
 }
 
 /* modal */
@@ -123,19 +124,19 @@ header{
 
   /* Modal Content/Box */
   .modal-content {
-    background-color: rgb(25,25,25);
-    color: white;
-    border: 1px solid white;
-    border-radius: 2px;
+    background-color: rgb(183, 183, 183);
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    border-radius: 4px;
     margin: 20% auto;
     padding: 20px;
     font-weight: 500;
-    width: 25%;
+	width: 25%;
   }
 
   /* The Close Button */
 .close {
-	background-color: rgb(192, 192, 192);
+	background-color: rgb(255, 255, 255);
 	width: 100px;
     padding: 5px;
     margin-left: 20px;
@@ -156,17 +157,21 @@ h2{
     padding: 5px;
     margin-left: 90px;
     margin-bottom: 5px;
-	background-color: #ce4b4b;
-	color: white;
+	background-color: #ff7f00;
+	color: rgb(255, 255, 255);
 }
 
 .shopbutton:hover{
-	background-color: #833131;
+	background-color: rgb(229, 115, 0);
 }
 
 .close:hover {
-	background-color: white;
+	background-color: rgb(229, 229, 229);
 } 
+
+li{
+	color: white;
+}
 
 ul li a {
 	display: inline-block;
@@ -200,10 +205,10 @@ ul > li:hover > ul
 {
 	display: block;
 	position: absolute;
-	background-color: rgb(15, 15, 15);
-	padding: 10px;
-	width: 300px;
-	right: -55px;
+	background-color: #f87d01;
+	padding: 15px;
+	width: 230px;
+	right: 200px;
 }
 
 .dropdownlogin ul a {
@@ -224,7 +229,7 @@ ul > li:hover > ul
 }
 
 .dropdown li a:hover{
-	color: #ce4b4b;
+	color: rgb(243, 243, 243);
 }
 
 .logo img{

@@ -1,43 +1,15 @@
-<div class="contener">
+<div class="container">
     <h1>Zarządzaj kontem</h1>
-    <table>
-        <tr>
-            <td><label>Imię: </label></td>
-            <td><input type="text" [(ngModel)]="user.name"></td>
-        </tr>
-        <tr>
-            <td><label>Nazwisko: </label></td>
-            <td><input type="text" [(ngModel)]="user.surname"></td>
-        </tr>
-        <tr>
-            <td><label>Płeć: </label></td>
-            <td><input type="text" [(ngModel)]="user.sex"></td>
-        </tr>
-        <tr>
-            <td><label>E-mail: </label></td>
-            <td><input type="text" [(ngModel)]="user.email"></td>
-        </tr>
-        <tr>
-            <td><label>Data urodzenia: </label></td>
-            <td><input type="text" [(ngModel)]="user.dateofbirth"></td>
-        </tr>
-        <tr>
-            <td><label>Numer telefonu: </label></td>
-            <td><input type="text" [(ngModel)]="user.phonenumber"></td>
-        </tr>
-        <tr>
-            <td><label>Ulica i numer: </label></td>
-            <td><input type="text" [(ngModel)]="user.street"></td>
-        </tr>
-        <tr>
-            <td><label>Kod pocztowy: </label></td>
-            <td><input type="text" [(ngModel)]="user.postcode"></td>
-        </tr>
-        <tr>
-            <td><label>Miasto: </label></td>
-            <td><input type="text" [(ngModel)]="user.city"></td>
-        </tr>
-    </table>   
+    <form>
+        <input type="text" placeholder="Imie" [(ngModel)]="user.name">
+        <input type="text" placeholder="Nazwisko" [(ngModel)]="user.surname">
+        <input type="text" placeholder="Email" [(ngModel)]="user.email">
+        <input type="text" placeholder="Data urodzin" [(ngModel)]="user.dateofbirth">
+        <input type="text" placeholder="Numer telefonu" [(ngModel)]="user.phonenumber">
+        <input type="text" placeholder="Ulica" [(ngModel)]="user.street">
+        <input type="text" placeholder="Kod pocztowy" [(ngModel)]="user.postcode">
+        <input type="text" placeholder="Miasto" [(ngModel)]="user.city">
+    </form>
     <button (click)="save()">
         Zapisz
     </button>

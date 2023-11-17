@@ -22,7 +22,7 @@
 }
 
 .basket-title{
-    color: #ce4b4b
+    color: #ff7f00;
 }
 
 .delivery{
@@ -118,7 +118,7 @@
 }
 
 .payment-line:hover{
-    color: #ce5252
+    color: #ff7f00;
 }
 
 input .transport_1{
@@ -195,7 +195,7 @@ hr{
 
 .summarymoney{
     font-size: 28px;
-    color: #df6363
+    color: #ff7f00;
 }
 
 
@@ -227,11 +227,11 @@ hr{
     width: 70px;
     padding: 10px;
     color: white;
-    background-color: #ce4b4b
+    background-color: #ff7f00;
 }
 
 #buttonnext:hover{
-    background-color: #833131;
+    background-color: rgb(229, 115, 0)
 }
 
 #buttonback{
@@ -240,11 +240,11 @@ hr{
     color: white;
     width: 70px;
     padding: 10px;
-    background-color: #ce4b4b
+    background-color: #ff7f00;
 }
 
 #buttonback:hover{
-    background-color: #833131;
+    background-color: rgb(229, 115, 0)
 }
 
 
@@ -261,7 +261,7 @@ hr{
 
   /* Modal Content/Box */
   .modal-content {
-    background-color: rgb(25,25,25);
+    background-color: rgb(234, 234, 234);
     color: white;
     border: 1px solid white;
     border-radius: 2px;
@@ -288,12 +288,12 @@ hr{
     padding: 5px;
     margin-left: 110px;
     margin-bottom: 5px;
-	background-color: #ce4b4b;
+	background-color: #ff7f00;
 	color: white;
 }
 
 .loginbutton:hover{
-	background-color: #833131;
+	background-color: rgb(229, 115, 0)
 }
 
 .close:hover {
@@ -303,12 +303,12 @@ hr{
 .buttondelete{
     width: 50px;
     padding: 5px;
-	background-color: #ce4b4b;
+	background-color: #ff7f00;
 	color: white;
 }
 
 .buttondelete:hover{
-	background-color: #833131;
+	background-color: rgb(229, 115, 0);
 	color: white;
 }
 

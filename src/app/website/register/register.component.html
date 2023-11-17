@@ -2,16 +2,16 @@
         <h1>Utwórz konto</h1>
         <p>Utwórz konto by móc korzystać z naszej szerokiej oferty</p>
         <form>
-            <input type="text" placeholder="Imie" [(ngModel)]="user.name">
-            <input type="text" placeholder="Nazwisko" [(ngModel)]="user.surname">
-            <input type="text" placeholder="Login" [(ngModel)]="user.login">
-            <input type="text" placeholder="Haslo" [(ngModel)]="user.password">
-            <input type="text" placeholder="Enail" [(ngModel)]="user.email">
-            <input type="text" placeholder="Data urodzin" [(ngModel)]="user.dateofbirth">
-            <input type="number" placeholder="Numer telefonu" [(ngModel)]="user.phonenumber">
-            <input type="text" placeholder="Ulica" [(ngModel)]="user.street">
-            <input type="text" placeholder="Kod pocztowy" [(ngModel)]="user.postcode">
-            <input type="text" placeholder="Miasto" [(ngModel)]="user.city">
+            <input type="text" placeholder="Imie" [(ngModel)]="user.name" required>
+            <input type="text" placeholder="Nazwisko" [(ngModel)]="user.surname" required>
+            <input type="text" placeholder="Login" [(ngModel)]="user.login" required>
+            <input type="text" placeholder="Haslo" [(ngModel)]="user.password" required>
+            <input type="text" placeholder="Enail" [(ngModel)]="user.email" required>
+            <input type="text" placeholder="Data urodzin" [(ngModel)]="user.dateofbirth" required>
+            <input type="number" placeholder="Numer telefonu" [(ngModel)]="user.phonenumber" required>
+            <input type="text" placeholder="Ulica" [(ngModel)]="user.street" required>
+            <input type="text" placeholder="Kod pocztowy" [(ngModel)]="user.postcode" required>
+            <input type="text" placeholder="Miasto" [(ngModel)]="user.city" required>
             <button type="submit">Utwórz konto</button>
         </form>
         <div class="login-link">

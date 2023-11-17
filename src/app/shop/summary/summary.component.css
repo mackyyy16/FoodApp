@@ -22,7 +22,7 @@
 }
 
 .basket-title, .delivery-title, .finished-title{
-    color: #ce4b4b
+    color: #ff7f00;
 }
 
 .delivery{
@@ -66,8 +66,6 @@
     font-size: 22px;
     margin-bottom: 5px;
 }
-
-
 
 /* contentright */
 
@@ -116,7 +114,7 @@ hr{
 
 .summarymoney{
     font-size: 28px;
-    color: #df6363
+    color: #ff7f00;
 }
 
 
@@ -148,19 +146,18 @@ hr{
     width: 140px;
     padding: 10px;
     color: white;
-    background-color:  #ce4b4b;
+    background-color:  #ff7f00;
 }
 
 #buttonnext:hover{
-    background-color: #833131;
+    background-color: rgb(229, 115, 0);
 	color: white;
 }
 
 .button-1 {
     align-items: center;
     appearance: none;
-    background-color: #fff;
-    border: 1px solid #dbdbdb;
+    background-color: #ff7f00;
     box-shadow: none;
     box-sizing: border-box;
     color: #363636;
@@ -183,6 +180,6 @@ hr{
   }
   
   .button-1:hover {
-    background-color: #b4b4b4;
+    background-color: rgb(229, 115, 0)
   }
   

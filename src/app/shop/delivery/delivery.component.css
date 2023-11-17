@@ -22,7 +22,7 @@
 }
 
 .basket-title, .delivery-title{
-    color: #ce4b4b
+    color: #ff7f00;
 }
 
 .delivery{
@@ -154,7 +154,7 @@ hr{
 
 .summarymoney{
     font-size: 28px;
-    color: #df6363
+    color: #ff7f00;
 }
 
 
@@ -175,7 +175,7 @@ hr{
 }
 
 .imgbox{
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 #buttonnext{
@@ -186,11 +186,11 @@ hr{
     width: 70px;
     padding: 10px;
     color: white;
-    background-color: #ce4b4b
+    background-color: #ff7f00;
 }
 
 #buttonnext:hover{
-    background-color: #833131;
+    background-color: rgb(229, 115, 0);
 }
 
 #buttonback{
@@ -199,9 +199,9 @@ hr{
     color: white;
     width: 70px;
     padding: 10px;
-    background-color: #ce4b4b
+    background-color: #ff7f00;
 }
 
 #buttonback:hover{
-    background-color: #833131;
+    background-color: rgb(229, 115, 0);
 }

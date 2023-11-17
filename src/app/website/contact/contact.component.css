@@ -1,62 +1,75 @@
-body, h1, h2, h3, p, ul, li, form, label, input, textarea, button {
+body {
+  font-family: 'Arial', sans-serif;
+    background: #f0f0f0;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Ustawienie kolorów i stylów tła */
-  
-  h1 {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    text-align: center;
-  }
-  
-  /* Stylowanie formularza */
-  form {
     display: flex;
-    flex-direction: column;
-    height: 680px;
-    margin-left: 38%;
-  }
-  
-  label {
-    margin-top: 1rem;
-  }
-  
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    margin-top: 5px;
-    font-size: 16px;
-    width: 500px;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 1rem;
-    width: 200px;
-  }
-  
-  button:hover {
-    background-color: #555;
-  }
-  
-  /* Responsywność */
-  @media screen and (max-width: 480px) {
-    form {
-      width: 100%;
-    }
-  }
-  
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+  background: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+form {
+  width: 100%;
+}
+form .input-group {
+  margin-bottom: 15px;
+}
+form .input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+form .input-group input,
+form .input-group textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+form .input-group textarea {
+  resize: vertical;
+}
+form .btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #ff7f00;
+  color: white;
+  cursor: pointer;
+}
+form .btn:hover {
+  background: rgb(229, 115, 0)
+}
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+.footer a {
+  color: orange;
+  text-decoration: none;
+}
+
+.input-group{
+  font-size: 16px;
+}
+
+input{
+  background: #F3F3F3;
+}
+
+textarea{
+  background: #F3F3F3;
+}
