@@ -5,7 +5,6 @@ import { FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
-import { AddApplicationComponent } from './website/add-application/add-application.component';
 import { ReviewApplicationComponent } from './website/review-application/review-application.component';
 import { LoginComponent } from './website/login/login.component';
 import { RegisterComponent } from './website/register/register.component';
@@ -41,7 +40,6 @@ import { OrderHistoryComponent } from './shop/order-history/order-history.compon
 @NgModule({
   declarations: [
     AppComponent,
-    AddApplicationComponent,
     ReviewApplicationComponent,
     LoginComponent,
     RegisterComponent,

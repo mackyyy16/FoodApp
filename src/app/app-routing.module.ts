@@ -7,7 +7,6 @@ import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './website/contact/contact.component';
 import { BasketComponent } from './shop/basket/basket.component';
 import { LoginComponent } from './website/login/login.component';
-import { AddApplicationComponent } from './website/add-application/add-application.component';
 import { ReviewApplicationComponent } from './website/review-application/review-application.component';
 import { RegisterComponent } from './website/register/register.component';
 import { AddPartsComponent } from './website/add-parts/add-parts.component';
@@ -42,7 +41,6 @@ const routes: Routes = [
   { path: 'gallery', component: GalleryComponent },
   { path: 'shop', component: ShopComponent},
   { path: 'price-list', component: PriceListComponent },
-  { path: 'add-application', component: AddApplicationComponent },
   { path: 'review-application', component: ReviewApplicationComponent },
   { path: 'add-parts', component: AddPartsComponent },
   { path: 'review-parts', component: ReviewPartsComponent },
