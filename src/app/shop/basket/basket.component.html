@@ -24,7 +24,7 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let part of parts">
-                        <td class="box-left"><img src='{{ "assets/images/" + part.imagePath }}'> <span id="infoname">{{part.producent}} {{part.name}}</span></td>
+                        <td class="box-left"><img src='{{ part.imagePath }}'> <span id="infoname">{{part.producent}} {{part.name}}</span></td>
                         <td><input type="number" [(ngModel)]="part.amount" (change)="editQuantity()"></td>
                         <td id="amount">{{part.price*part.amount}} zł</td>
                         <td><button class="buttondelete" (click)="removeItem(part)">Usuń</button></td>

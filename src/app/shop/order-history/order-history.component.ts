@@ -20,6 +20,7 @@ export class OrderHistoryComponent {
   }
 
   showOrderedParts(order: IOrder): void{
+    debugger;
     this.toggleOrderedParts = true;
     this.orderParts = JSON.parse(order.meals_info);
   }

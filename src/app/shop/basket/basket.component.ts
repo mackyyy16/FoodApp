@@ -52,7 +52,8 @@ export class BasketComponent implements OnDestroy{
   }
 
   updateTotalValue(){
-    this.totalValue=this.sum+this.transportCost+this.paymentCost;
+    const total=this.sum+this.transportCost+this.paymentCost;
+    this.totalValue = Number(total.toFixed(2));
   }
 
   removeItem(part: ShopItem){

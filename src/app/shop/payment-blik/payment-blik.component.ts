@@ -20,9 +20,9 @@ export class PaymentBlikComponent {
   constructor(private readonly router: Router,
     private readonly mealService: MealService,
     private readonly orderService: OrderService){
-      // this.orderService.getOrders().then(data => {
-      //   this.orders = data;
-      // });
+      this.orderService.getOrders().then(data => {
+        this.orders = data;
+      });
     }
 
   acceptBlik(): void {

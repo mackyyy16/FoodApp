@@ -61,7 +61,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let part of orderParts">
-                    <td><img src='{{ "assets/images/" + part.imagePath }}'></td>
+                    <td><img src='{{ part.imagePath }}'></td>
                     <td>{{part.name}}</td>
                     <td>{{part.producent}}</td>
                     <td>{{part.price}} zł</td>

@@ -6,7 +6,7 @@
                 <tr>
                     <th>Zamówienie</th>
                     <th>Data zamówienia</th>
-                    <th>Wysyłka dnia</th>
+                    <!-- <th>Wysyłka dnia</th> -->
                     <th>Status</th>
                     <th>Zakupione przedmioty</th>
                     <th>Koszt całkowity</th>
@@ -16,7 +16,7 @@
                 <tr *ngFor="let order of clientOrders">
                     <td>Zamówienie #{{order.id_order}}</td>
                     <td>{{order.start_date}}</td>
-                    <td>{{order.end_date}}</td>
+                    <!-- <td>{{order.end_date}}</td> -->
                     <td>{{order.status}}</td>
                     <td>
                         <button (click)="showOrderedParts(order)">
@@ -45,7 +45,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let part of orderParts">
-                    <td><img src='{{ "assets/images/" + part.imagePath }}'></td>
+                    <td><img src='{{ part.imagePath }}'></td>
                     <td>{{part.name}}</td>
                     <td>{{part.producent}}</td>
                     <td>{{part.price}} zł</td>
