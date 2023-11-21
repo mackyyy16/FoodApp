@@ -17,12 +17,13 @@ th{
 img{
     height: 125px;
     width: 125px;
-    opacity: 0.5;
 }
 
 input{
     width: 40px;
     height: 20px;
+    border: 1px solid black;
+    border-radius: 3px;
 }
 
 h2{
@@ -36,9 +37,11 @@ td{
 button{
     width: 60px;
     padding: 5px;
+    background-color: #ff7f00;
+    color: white;
 }
 
 button:hover{
-    background-color: rgb(173, 173, 173);
+    background-color: rgb(229, 115, 0)
 }
 

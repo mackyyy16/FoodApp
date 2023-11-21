@@ -66,6 +66,11 @@
     font-weight: 800;
 }
 
+.test1{
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
 .table-basket thead tr th{
     border-left: 1px solid gray;
     padding: 10px;

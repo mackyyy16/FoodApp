@@ -5,15 +5,9 @@ import { FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
-import { ReviewApplicationComponent } from './website/review-application/review-application.component';
 import { LoginComponent } from './website/login/login.component';
 import { RegisterComponent } from './website/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AddPartsComponent } from './website/add-parts/add-parts.component';
-import { ReviewPartsComponent } from './website/review-parts/review-parts.component';
-import { ReviewApplicationWorkerComponent } from './website/review-application-worker/review-application-worker.component';
-import { BrowseEmployeesComponent } from './website/browse-employees/browse-employees.component';
-import { BrowseReportComponent } from './website/browse-report/browse-report.component';
 import { ManageAccountComponent } from './website/manage-account/manage-account.component';
 import { BasketComponent } from './shop/basket/basket.component';
 import { ShopComponent } from './shop/shop.component';
@@ -34,22 +28,14 @@ import { BodyPartsComponent } from './shop/parts/body-parts/body-parts.component
 import { PaymentBlikComponent } from './shop/payment-blik/payment-blik.component';
 import { PaymentTransferComponent } from './shop/payment-transfer/payment-transfer.component';
 import { FinishOrderComponent } from './shop/finish-order/finish-order.component';
-import { ReviewOrdersComponent } from './website/review-orders/review-orders.component';
 import { OrderHistoryComponent } from './shop/order-history/order-history.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReviewApplicationComponent,
     LoginComponent,
     RegisterComponent,
     ShopComponent,
-    AddPartsComponent,
-    ReviewPartsComponent,
-    ReviewApplicationWorkerComponent,
-    ReviewOrdersComponent,
-    BrowseEmployeesComponent,
-    BrowseReportComponent,
     ManageAccountComponent,
     BodyPartsComponent,
     ElectronicsPartsComponent,

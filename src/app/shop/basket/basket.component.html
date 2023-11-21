@@ -25,7 +25,7 @@
                 <tbody>
                     <tr *ngFor="let part of parts">
                         <td class="box-left"><img src='{{ part.imagePath }}'> <span id="infoname">{{part.producent}} {{part.name}}</span></td>
-                        <td><input type="number" [(ngModel)]="part.amount" (change)="editQuantity()"></td>
+                        <td><input type="number" class="test1" [(ngModel)]="part.amount" (change)="editQuantity()"></td>
                         <td id="amount">{{part.price*part.amount}} zł</td>
                         <td><button class="buttondelete" (click)="removeItem(part)">Usuń</button></td>
                     </tr>
@@ -131,13 +131,13 @@
             <img class="imgbox"src="../..//src/assets/images/check.png">
             Gwarancja niskich cen<br>
             <img class="imgbox"src="../..//src/assets/images/check.png">
-            Tylko oryginalne części<br>
+            Tylko świeże składniki<br>
             <img class="imgbox"src="../..//src/assets/images/check.png">
             Natychmiastowa dostawa<br>
             <img class="imgbox"src="../..//src/assets/images/check.png">
-            Bezproblemowy zwroty i wymiany<br>
+            Elastyczne opcje zamówienia<br>
             <img class="imgbox"src="../..//src/assets/images/check.png">
-            Pełna weryfikacja zamówień<br>
+            Dokładne śledzenie zamówienia<br>
         </div>
     </div>
     <button id="buttonnext" (click)="next()">Dalej</button>

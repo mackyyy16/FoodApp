@@ -1,11 +1,11 @@
 <div class="motor-oils">
-    <h2>Części silnika</h2>
+    <h2>Trattoria BellaTavola</h2>
     <table>
         <thead>
             <tr>
                 <th></th>
                 <th>Nazwa</th>
-                <th>Producent</th>
+                <!-- <th>Producent</th> -->
                 <th>Cena</th>
                 <th>Ilość</th>
                 <th></th>
@@ -15,7 +15,7 @@
             <tr *ngFor="let meal of meals">
                 <td><img src='{{ meal.imagePath }}'></td>
                 <td>{{meal.name}}</td>
-                <td>{{meal.producent}}</td>
+                <!-- <td>{{meal.producent}}</td> -->
                 <td>{{meal.price}} zł</td>
                 <td>
                     <input type="number">

@@ -1,19 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PriceListComponent } from './website/price-list/price-list.component';
 import { HomeComponent } from './website/home/home.component';
 import { GalleryComponent } from './website/gallery/gallery.component';
 import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './website/contact/contact.component';
 import { BasketComponent } from './shop/basket/basket.component';
 import { LoginComponent } from './website/login/login.component';
-import { ReviewApplicationComponent } from './website/review-application/review-application.component';
 import { RegisterComponent } from './website/register/register.component';
-import { AddPartsComponent } from './website/add-parts/add-parts.component';
-import { ReviewPartsComponent } from './website/review-parts/review-parts.component';
-import { ReviewApplicationWorkerComponent } from './website/review-application-worker/review-application-worker.component';
-import { BrowseEmployeesComponent } from './website/browse-employees/browse-employees.component';
-import { BrowseReportComponent } from './website/browse-report/browse-report.component';
 import { ManageAccountComponent } from './website/manage-account/manage-account.component';
 import { SparePartsComponent } from './shop/parts/spare-parts/spare-parts.component';
 import { ElectronicsPartsComponent } from './shop/parts/electronics/electronics.component';
@@ -33,21 +26,12 @@ import { PaymentBlikComponent } from './shop/payment-blik/payment-blik.component
 import { PaymentTransferComponent } from './shop/payment-transfer/payment-transfer.component';
 import { PaymentTransfer24Component } from './shop/payment-transfer-24/payment-transfer-24.component';
 import { FinishOrderComponent } from './shop/finish-order/finish-order.component';
-import { ReviewOrdersComponent } from './website/review-orders/review-orders.component';
 import { OrderHistoryComponent } from './shop/order-history/order-history.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'shop', component: ShopComponent},
-  { path: 'price-list', component: PriceListComponent },
-  { path: 'review-application', component: ReviewApplicationComponent },
-  { path: 'add-parts', component: AddPartsComponent },
-  { path: 'review-parts', component: ReviewPartsComponent },
-  { path: 'review-application-worker', component: ReviewApplicationWorkerComponent },
-  { path: 'review-orders', component: ReviewOrdersComponent },
-  { path: 'browse-employees', component: BrowseEmployeesComponent},
-  { path: 'browse-report', component: BrowseReportComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'basket', component: BasketComponent},
   { path: 'delivery', component: DeliveryComponent},
